@@ -6,6 +6,7 @@ import { FcGoogle as GoogleIcon } from "react-icons/fc";
 
 import { IoClose as CloseIcon } from "react-icons/io5";
 import Button from "../Button";
+import InputWithLabel from "../input/InputWithLabel";
 
 function Index() {
   return (
@@ -55,6 +56,8 @@ function Index() {
             </div>
 
             {/* user or email input */}
+
+            <InputWithLabel />
 
             {/* password input */}
 

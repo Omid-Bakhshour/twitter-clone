@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a:visited {
+  text-decoration: none !important;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+  -ms-touch-action: manipulation !important;
+  touch-action: manipulation !important;
+}
+
+*:focus {
+  -webkit-tap-highlight-color: transparent !important;
+  outline: none !important;
+  -ms-touch-action: manipulation !important;
+  touch-action: manipulation !important;
+}
+
 @layer components {
   .modal_bg {
     @apply fixed bg-modalBgColor flex flex-col z-[102]  w-full h-full top-0 right-0;
