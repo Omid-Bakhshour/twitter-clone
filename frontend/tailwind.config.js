@@ -14,6 +14,7 @@ module.exports = {
       },
       colors: {
         twitterColor: "#1DA1F2",
+        modalBgColor: "rgba(0, 0, 0, 0.3)",
       },
     },
   },

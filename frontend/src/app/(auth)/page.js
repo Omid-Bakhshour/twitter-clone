@@ -5,10 +5,15 @@ import React from "react";
 import { AiOutlineTwitter as TwitterIcon } from "react-icons/ai";
 
 import { FcGoogle as GoogleIcon } from "react-icons/fc";
+import SigninModal from "@/components/signin/index";
 
 function page() {
   return (
     <main className="w-full flex flex-col-reverse lg:flex-row lg:min-h-screen  ">
+      {/* modals */}
+      <div>
+        <SigninModal />
+      </div>
       {/* image */}
 
       <div className="w-full  flex-1 hidden md:flex">
@@ -47,7 +52,7 @@ function page() {
           <div className="w-full  flex justify-center lg:justify-start">
             <Button
               text={"Sign up with Google"}
-              bgColor={"#ffffff"}
+              customClass={"bg-white hover:bg-gray-200 "}
               textColor={"#000000"}
               image={<GoogleIcon className="w-5 h-5 block" />}
             />
@@ -64,10 +69,10 @@ function page() {
 
           {/* create account button */}
 
-          <div className="w-full flex justify-center lg:justify-start items-center lg:items-start">
+          <div className="w-full flex justify-center lg:justify-start items-center lg:items-start ">
             <Button
               text={"Create account"}
-              bgColor={"#1DA1F2"}
+              customClass={"bg-twitterColor hover:bg-blue-500 "}
               textColor={"#ffffff"}
             />
           </div>
@@ -103,7 +108,7 @@ function page() {
           <div className="w-full  flex  justify-center lg:justify-start">
             <Button
               text={"Sign in"}
-              bgColor={"#ffffff"}
+              customClass={"bg-white hover:bg-blue-100 "}
               textColor={"#1DA1F2"}
             />
           </div>
