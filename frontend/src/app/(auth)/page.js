@@ -1,6 +1,8 @@
+"use client";
+
 import Button from "@/components/Button";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
 import { AiOutlineTwitter as TwitterIcon } from "react-icons/ai";
 
@@ -8,12 +10,11 @@ import { FcGoogle as GoogleIcon } from "react-icons/fc";
 import SigninModal from "@/components/signin/index";
 
 function page() {
+  const [showSignIn, setShowSignin] = useState(false);
   return (
     <main className="w-full flex flex-col-reverse lg:flex-row lg:min-h-screen  ">
       {/* modals */}
-      <div>
-        <SigninModal />
-      </div>
+      <div>{showSignIn && <SigninModal closeHandler={()=>setShowSignin(false)} />}</div>
       {/* image */}
 
       <div className="w-full  flex-1 hidden md:flex">
@@ -106,11 +107,13 @@ function page() {
           {/* signin button */}
 
           <div className="w-full  flex  justify-center lg:justify-start">
-            <Button
-              text={"Sign in"}
-              customClass={"bg-white hover:bg-blue-100 "}
-              textColor={"#1DA1F2"}
-            />
+            <div onClick={() => setShowSignin(true)}>
+              <Button
+                text={"Sign in"}
+                customClass={"bg-white hover:bg-blue-100 "}
+                textColor={"#1DA1F2"}
+              />
+            </div>
           </div>
         </div>
       </div>

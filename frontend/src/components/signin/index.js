@@ -8,7 +8,7 @@ import { IoClose as CloseIcon } from "react-icons/io5";
 import Button from "../Button";
 import InputWithLabel from "../input/InputWithLabel";
 
-function Index() {
+function Index({ closeHandler }) {
   return (
     <ModalContainer
       minWidthSize="600px"
@@ -16,7 +16,10 @@ function Index() {
       maxheightSize="80vh"
     >
       <div className="w-full  flex justify-center relative ">
-        <div className="absolute top-4 left-5 cursor-pointer">
+        <div
+          onClick={closeHandler}
+          className="absolute top-4 left-5 cursor-pointer"
+        >
           <CloseIcon className="w-6 h-6 block text-black" />
         </div>
 
@@ -57,9 +60,23 @@ function Index() {
 
             {/* user or email input */}
 
-            <InputWithLabel />
+            <div className="w-full flex my-3">
+              <InputWithLabel
+                type={"text"}
+                label={"Phone, email, or username"}
+                name={"email"}
+              />
+            </div>
 
             {/* password input */}
+
+            <div className="w-full flex my-3">
+              <InputWithLabel
+                type={"password"}
+                label={"Password"}
+                name={"password"}
+              />
+            </div>
 
             {/* login button */}
 
